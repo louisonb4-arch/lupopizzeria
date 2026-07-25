@@ -50,18 +50,16 @@
     if (!doux) montreHero();
   }
 
-  function vue() {
-    try { return sessionStorage.getItem('lupo-intro') === '1'; } catch (e) { return false; }
-  }
-  function marque() {
-    try { sessionStorage.setItem('lupo-intro', '1'); } catch (e) {}
-  }
-
-  if (!intro || doux || vue() || location.hash) {
+  if (!intro || doux) {
     sauteIntro();
   } else {
+    /* on repart toujours du haut : l'ancre éventuelle est retirée et le
+       navigateur ne restaure pas la position (voir scrollRestoration dans <head>) */
+    if (location.hash) {
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+    window.scrollTo(0, 0);
     html.classList.add('ouverture');
-    marque();
 
     /* on attend les deux images, sans jamais dépasser 600 ms */
     var images = intro.querySelectorAll('img');

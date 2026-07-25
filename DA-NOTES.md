@@ -74,9 +74,23 @@ Un rideau qui se lève en deux temps, ~2,4 s au total :
 Aucun texte n'est rendu en webfont pendant l'ouverture — le loup et le mot LUPO sont
 les PNG du logo, préchargés. Pas de FOUT, pas de saut.
 
-Elle ne joue **qu'une fois par session** (`sessionStorage`), et est sautée si l'URL
-porte une ancre, si `prefers-reduced-motion` est actif, ou dès le premier clic ou la
-première touche. Le scroll est verrouillé le temps du rideau, libéré dès qu'il part.
+Elle joue **à chaque chargement**, et la page repart toujours du haut. Trois choses
+s'en assurent :
+
+- `history.scrollRestoration = 'manual'` — déclaré en ligne dans le `<head>`, pas
+  dans `script.js`, sinon le navigateur a déjà restauré la position au moment où le
+  script s'exécute ;
+- l'ancre éventuelle est retirée de l'URL (`replaceState`), pour qu'un rechargement
+  depuis `#carte` ne saute pas à la carte ;
+- `scrollTo(0, 0)` juste avant de verrouiller le scroll.
+
+**Conséquence à connaître :** un lien profond vers une section (`…/#carte` partagé de
+l'extérieur) ouvre désormais le hero avec l'animation, pas la section visée. C'est le
+prix de « l'ouverture à chaque fois ».
+
+Elle reste sautée si `prefers-reduced-motion` est actif, et s'interrompt au premier
+clic ou à la première touche. Le scroll est verrouillé le temps du rideau, libéré dès
+qu'il part.
 
 ## Motion
 
