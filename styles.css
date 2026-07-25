@@ -322,7 +322,11 @@ h1,h2,h3{margin:0}
 @media(max-width:860px){.bizzo{grid-template-columns:1fr}}
 
 /* ── La maison ──────────────────────────── */
-.maison{position:relative;overflow:hidden;padding:clamp(56px,8vw,110px) var(--gap)}
+.maison{
+  position:relative;overflow:hidden;
+  background:var(--sauge-pale);
+  padding:clamp(56px,8vw,110px) var(--gap);
+}
 .maison-in{position:relative;z-index:2;max-width:1180px;margin:0 auto}
 .maison-cols{
   display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);
