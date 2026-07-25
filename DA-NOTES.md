@@ -111,6 +111,26 @@ Les mentions de suppléments propres à chaque pizza sont conservées : burrata 
 Margarita et la Hot & spicy, verre de Nell sur la 4 fromages, chorizo sur le Bol
 d'air breton.
 
+### Dolci et boissons — sourcés ailleurs, sans prix
+Ces deux sections manquent à la carte papier. Elles ont été reconstituées :
+
+- **Dolci** — tiramisu et fondant au chocolat, présents sur la page de livraison et
+  cités dans plusieurs avis Google (« un tiramisu cuit à la perfection »).
+- **Boissons** — relevées sur l'ardoise « BOISSONS MAISON » lisible derrière le
+  comptoir sur une photo du lieu. Pour commencer : limoncello spritz, Lupo spritz,
+  Ginger Hemingway, Negroni, Picaros sour. Pour terminer : gin-to, limoncello,
+  amaretto, mirtilla, grappa.
+- **Vins nature** — les quatre bouteilles de la page de livraison, avec leur domaine.
+
+**Aucun prix n'est publié sur ces trois listes**, et c'est délibéré : l'ardoise date
+de janvier 2024, donc plus de deux ans. Le site affiche « prix du jour à l'ardoise »,
+ce qui est à la fois vrai et fidèle au fonctionnement de la maison. Dès que le client
+donne les tarifs, il suffit d'ajouter un `<span class="prix">` dans chaque `.ligne`,
+comme sur les pizze.
+
+Les noms de l'ardoise ont été relus sur agrandissement. Deux points à faire valider :
+**Picaros sour** (même nom que la pizza, l'écriture est ambiguë) et **mirtilla**.
+
 ### Corrigé depuis la première version
 Les prix trouvés en ligne (page de livraison) étaient **tous faux** — ils incluaient
 une marge de plateforme. La carte papier fait foi. De même, la spécialité du midi
@@ -121,8 +141,9 @@ s'écrit **bizzo / bizzi**, pas « pizzo ».
    et dimanche dîner uniquement » — ce que le site reprend. Restent à valider les
    heures exactes : le site affiche lun–ven 12 h – 14 h et 18 h 30 – 22 h 30, samedi
    et dimanche 18 h 30 – 22 h 30.
-2. **Desserts et boissons.** Absents de la carte fournie alors que la signature dit
-   « limoncello » et que les avis citent le tiramisu. Section à ajouter dès réception.
+2. **Les prix des dolci et des boissons.** Ces deux sections ne figurent pas sur la
+   carte papier fournie ; leur contenu vient d'ailleurs (voir ci-dessous) et
+   **aucun prix n'est affiché**. À compléter dès réception.
 3. **Réservation en ligne.** Google renvoie vers laddition.com, lien introuvable.
    Le site pousse l'appel téléphonique en attendant.
 4. **Mentions légales** : raison sociale, SIRET, RCS, TVA, directeur de la publication

@@ -8,6 +8,7 @@
   var cibles = document.querySelectorAll(
     '.hero-logo, .hero-titre, .hero-lede, .hero-actions, ' +
     '.oeil, .display, .liste > li, .cadre, .legende, .pied-carte, .planche figure, ' +
+    '.sous-groupe, .soif li, .ardoise, ' +
     '.bizzo-img, .chapo, .ing-large, .prix-fort, .bizzo-txt .bt, ' +
     '.chiffres, .sous-titre, .meute li, .avis blockquote, ' +
     '.venir-cols > div, .bt-orange, .pied-logo'

@@ -211,14 +211,49 @@ h1,h2,h3{margin:0}
   font-size:.82rem;text-transform:uppercase;letter-spacing:.09em;
 }
 
+/* sous-groupes de la carte (boissons) */
+.sous-groupe{
+  font-family:var(--mono);font-size:.7rem;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--orange);
+  margin:2.2em 0 .9em;
+}
+.bloc > .ing-large + .sous-groupe{margin-top:1.6em}
+
+/* listes sans prix : les noms seuls, en deux colonnes */
+.soif{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(2,1fr);
+  column-gap:clamp(20px,3vw,44px);
+}
+.soif li{
+  padding:11px 0;border-top:1px solid var(--sauge-clair);
+  font-weight:600;font-size:.9rem;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--vert);
+}
+.soif li:nth-child(-n+2){border-top:none;padding-top:0}
+@media(max-width:560px){
+  .soif{grid-template-columns:1fr}
+  .soif li:nth-child(2){border-top:1px solid var(--sauge-clair);padding-top:11px}
+}
+
+.ardoise{
+  margin:1.4em 0 0;font-size:.74rem;letter-spacing:.09em;
+  color:var(--vert);opacity:.72;max-width:48ch;
+}
+
 /* pictos */
 .pic{width:15px;height:15px;flex:0 0 auto}
 .pic-veg{fill:var(--sauge);stroke:var(--sauge)}
 .pic-feu{fill:var(--orange);stroke:none}
 
 /* cadres bizzi + supp' */
-.carte-cote{position:sticky;top:88px;display:flex;flex-direction:column;gap:22px}
-@media(max-width:960px){.carte-cote{position:static}}
+.carte-cote{display:flex;flex-direction:column;gap:22px}
+/* dolci et boissons : blocs simples sous les deux encadrés */
+.bloc-cote{margin:clamp(18px,2.4vw,30px) 0 0}
+.bloc-cote:last-of-type{margin-bottom:0}
+.bloc-cote .display{font-size:clamp(2rem,3.6vw,2.8rem)}
+.bloc-cote .soif{grid-template-columns:1fr}
+.bloc-cote .soif li:nth-child(2){border-top:1px solid var(--sauge-clair);padding-top:11px}
 .cadre{
   border:1.5px solid var(--vert);border-radius:18px;
   padding:clamp(20px,2.4vw,30px);background:var(--blanc);
