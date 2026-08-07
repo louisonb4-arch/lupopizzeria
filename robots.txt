@@ -2,5 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /mentions-legales.html
 Disallow: /confidentialite.html
-
-Sitemap: https://lupo-nantes.fr/sitemap.xml
+Sitemap: https://lupopizzeria.vercel.app/sitemap.xml
